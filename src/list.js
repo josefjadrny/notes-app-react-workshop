@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 export const List = () => {
@@ -16,8 +17,8 @@ export const List = () => {
       <ul>
         {notes.map(note => (
           <li key={note.id}>
-            {note.title}
-          </li>
+            <Link to={`/note/${note.id}`}>{note.title}</Link>
+?         </li>
         ))}
       </ul>
     </div>

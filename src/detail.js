@@ -14,7 +14,7 @@ export const Detail = () => {
 
   return (
     <div>
-      <h2>Note detail Id: {note.id}</h2>
+      <h1>Note detail Id: {note.id}</h1>
       <p>{note.title}</p>
     </div>
   )

@@ -13,7 +13,7 @@ export const List = () => {
 
   return (
     <div>
-      <h2>List all notes</h2>
+      <h1>List all notes</h1>
       <ul>
         {notes.map(note => (
           <li key={note.id}>

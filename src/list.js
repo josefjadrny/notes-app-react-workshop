@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom'
+import LanguageContext from './languageContext'
 import axios from 'axios'
 
 export const List = () => {
+  const language = useContext(LanguageContext)
   const [notes, setNotes] = useState([] )
 
   useEffect(() => {
@@ -13,7 +15,7 @@ export const List = () => {
 
   return (
     <div>
-      <h1>List all notes</h1>
+      <h1>{language.LIST_ALL}</h1>
       <ul>
         {notes.map(note => (
           <li key={note.id}>

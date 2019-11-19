@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
+import LanguageContext from "./languageContext";
 
 export const Detail = () => {
+  const language = useContext(LanguageContext)
   const { id } = useParams()
   const [note, setNote] = useState([] )
 
@@ -14,7 +16,7 @@ export const Detail = () => {
 
   return (
     <div>
-      <h1>Note detail Id: {note.id}</h1>
+      <h1>{language.DETAIL} {note.id}</h1>
       <p>{note.title}</p>
     </div>
   )
